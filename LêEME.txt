@@ -1,0 +1,14 @@
+Hemos realizado unos cambios de última hora debido a que a la hora de copiar el codigo tuvimos una confusión con una versión antigua.
+los cambios realizados son los siguiente:
+1. Flags: la flag del timer y la del 4 estaban escritas en binario y tienen que estar en hexadecimal.
+2. Eventos:
+-evento de fallo: el algoritmo usado no utiliza una variable llamada 'pulsado' sino que utiliza una auxiliar llamada 'c' recorriendo cada una de las posibles pulsaciones que se puedan producir o no.
+-evento de acierto: idem de fallo
+3. Antirrebotes: faltaba una linea de código que completaba el funcionamiento del algoritmo haciendo que se actualizara el valor de espera.
+4. Subrrutinas:
+-S2E3: al tener 10 respuestas no encendia ningún led más a pesar de haber entrado en dicha subrutina. En S2E4 después se mataba el timer que por el 'if' de S2E3 no era creado al tener 10 respuestas. Hemos sacado la creación del timer fuera del 'if'
+
+Conclusión:
+Varios de estos problemas ya estaban resueltos como los puntos 1 , 2 y 3. El fallo se produjo al pasar el código al PDF
+
+Gracias y disculpen las molestias
